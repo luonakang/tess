@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><title>git版本控制工具，一般没做完一个功能就放到git仓库中，然后再进行下一个功能</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h4 id="git版本控制工具一般没做完一个功能就放到git仓库中然后再进行下一个功能">git版本控制工具，一般没做完一个功能就放到git仓库中，然后再进行下一个功能</h4>
+
+<p><strong>1、初始化git仓库</strong>，这个仓库会存放git对我们项目代码进行备份的文件 <br>
+1.1在项目文件夹右键打开git bash 输入命令，git init <br>
+<strong>2、配置相关信息</strong> <br>
+    2.1用户名<code>git config --global user.name    "mingzi"</code> <br>
+    2.2邮箱<code>git config --global user.email "邮箱名"</code> <br>
+<strong>3、存储修改过的代码到.git仓库</strong> <br>
+    3.1将需要操作的文件指向git仓库暂存，命令<code>git add ./readme.md(文件路径)或者（git add  ./）</code> <br>
+3.2放到git仓库 命令 <code>git commit -m   "更改说明，描述对代码的操作"</code>  <br>
+3.3一次性把修改的代码放到git仓库中 命令 <code>git commit --all -m "描述说明"</code> <br>
+<strong>4、检测是否当前代码是否有add到仓库暂存区</strong> 命令 git status (git commit后就看不到了，此命令是看是否git add了)</p>
+
+<p><strong>5、查看提交的记录</strong> 命令 <code>git log</code> <br>
+<strong>6、清楚 命令</strong><code>clear</code> <br>
+<strong>7、看到简洁版的日志</strong> <code>git log --oneline</code> <br>
+<strong>8、退回到之前的版本</strong>  命令 <code>git reset --hard Head~0</code>（0指向最新的）表示回退到最新的代码提交时的状态 <br>
+<code>Head~1</code>表示回退到上一次代码提交时的状态 <br>
+<code>Head~？</code>写几就退回上几次到指定版本提交时的状态 <br>
+注意：：退回之后，就没办法在返回前面的版本 <br>
+<strong>9、忽略文件</strong>，可以设置被忽略的文件或者目录，被忽略的不会被提交到仓库中 <br>
+在项目文件夹的以及目录下新建文件名为 <code>.gitignore</code>的文档，将要忽略的文件路径放到文档中一行写一个路径，格式/开头 <br>
+<strong>10、到指定的版本</strong>，不论是前还是后都可以  命令 <code>git reset --hard 【版本号】</code> <br>
+<strong>11、查看所有版本切换的记录</strong> 命令 <code>git reflog</code></p>
+
+<h4 id="分支">分支</h4>
+
+<p><strong>12、创建分支dev</strong> <code>git branch dev</code> （刚创建时dev分支里的东西和master主分支里的东西是一样的） <br>
+<strong>13、切换分支</strong> <code>git checkout dev</code> （切换至分支dev） <br>
+<strong>14、合并分支</strong> <code>git merge dev</code> (将当前的分支，与dev分支合并) <br>
+<strong>15、查看有哪些分支</strong> <code>git branch</code> 输出结果分支名前有*的是当前分支</p></div></body></html>
